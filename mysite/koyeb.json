@@ -15,7 +15,7 @@
       }
     ],
     "run": {
-      "cmd": "gunicorn --worker-tmp-dir /dev/shm mysite.main.wsgi",
+      "cmd": "gunicorn --worker-tmp-dir /dev/shm mysite.mysite.wsgi",
       "type": "http",
       "args": {
         "name": "my-django-app",
