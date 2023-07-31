@@ -1,1 +1,1 @@
-web: gunicorn --worker-tmp-dir /dev/shm mysite.wsgi
+web: waitress-serve --port=8000 mysite.wsgi:application

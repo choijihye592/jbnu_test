@@ -15,7 +15,7 @@
       }
     ],
     "run": {
-      "cmd": "gunicorn --worker-tmp-dir /dev/shm mysite.wsgi",
+      "cmd": "waitress-serve --port=8000 mysite.wsgi:application",
       "type": "http",
       "args": {
         "name": "my-django-app",
