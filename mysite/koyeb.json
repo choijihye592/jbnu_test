@@ -1,34 +1,43 @@
 {
-    "name": "myapp",
+    "name": "my-django-app",
     "image": "your-django-image:latest",
     "env": {
-        "DJANGO_SECRET_KEY": {
-          "secret": "django_secret_key" 
-        },
-        "DEBUG": "False",
-        "ALLOWED_HOSTS": "*"
+      "DJANGO_SECRET_KEY": {
+        "secret": "django_secret_key"
       },
+      "DEBUG": "False",
+      "ALLOWED_HOSTS": "*"
+    },
     "ports": [
       {
-        "name": "http",
-        "protocol": "HTTP",
         "port": 80,
-        "targetPort": 8000
+        "protocol": "HTTP"
       }
     ],
-
     "run": {
-        "cmd": "gunicorn sss.mysite.wsgi:application --bind 0.0.0.0:$PORT"
-    },
-
-    "command": ["gunicorn", "mysite.wsgi", "--bind", "0.0.0.0:8000"],
-    "volumes": [
-        {
-            
-        "name": "staticfiles",
-        "path": "/app/sss/mysite/mysite/staticfiles"
-
+      "cmd": "gunicorn mysite.wsgi:application --bind 0.0.0.0:$PORT",
+      "type": "http",
+      "args": {
+        "name": "my-django-app",
+        "env": [],
+        "http": {
+          "port": 80,
+          "health": {
+            "http": {
+              "path": "/",
+              "port": 80
+            },
+            "type": "http",
+            "interval": "10s",
+            "timeout": "2s",
+            "check": {
+              "type": "http",
+              "path": "/",
+              "port": 80
+            }
+          }
         }
-    ]
-  }
+      }
+    }
+}
   
