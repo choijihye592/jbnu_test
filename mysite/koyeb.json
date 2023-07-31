@@ -16,12 +16,17 @@
         "targetPort": 8000
       }
     ],
+    
+    "run": {
+        "cmd": "gunicorn mysite.wsgi:application --bind 0.0.0.0:$PORT"
+    },
+
     "command": ["gunicorn", "mysite.wsgi", "--bind", "0.0.0.0:8000"],
     "volumes": [
         {
             
         "name": "staticfiles",
-        "path": "/app/staticfiles"
+        "path": "/app/sss/mysite/mysite/staticfiles"
 
         }
     ]

@@ -1,0 +1,42 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+*.pyo
+
+# Ignore the virtual environment
+.Python
+myvenv/
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore logs and database files
+*.log
+db.sqlite3
+.DS_Store
+
+# Ignore staticfiles (generated when running collectstatic)
+/staticfiles/
+
+# Ignore media files (user uploads)
+/media/
+
+# Ignore secret key
+*.secret
+
+# Ignore environment files
+.vscode
+.env
+.env.*
+
+# Ignore local development settings
+local_settings.py
+
+# Ignore backup files
+*.bak
+*.bak.*
+
+# Ignore pycache directories
+__pycache__/
