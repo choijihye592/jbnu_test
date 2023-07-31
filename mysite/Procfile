@@ -1,1 +1,1 @@
-web: gunicorn --worker-tmp-dir /dev/shm sss.mysite.wsgi
+web: gunicorn --worker-tmp-dir /dev/shm mysite.mysite.wsgi
