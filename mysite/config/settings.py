@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') #수정
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #수정
+DEBUG = True #수정
 
 ALLOWED_HOSTS = ["DJANGO_ALLOWED_HOSTS", '127.0.0.1']#수정 
 DJANGO_ALLOWED_HOSTS = 'booklist-jbnu.koyeb.app'
