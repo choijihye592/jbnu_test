@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware', #추가
 ]
 
-ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
