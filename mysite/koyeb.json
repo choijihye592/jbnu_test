@@ -10,7 +10,7 @@
     },
     "ports": [
       {
-        "port": 80,
+        "port": 8000,
         "protocol": "HTTP"
       }
     ],
@@ -21,11 +21,11 @@
         "name": "my-django-app",
         "env": [],
         "http": {
-          "port": 80,
+          "port": 8000,
           "health": {
             "http": {
               "path": "/",
-              "port": 80
+              "port": 8000
             },
             "type": "http",
             "interval": "10s",
@@ -33,7 +33,7 @@
             "check": {
               "type": "http",
               "path": "/",
-              "port": 80
+              "port": 8000
             }
           }
         }
